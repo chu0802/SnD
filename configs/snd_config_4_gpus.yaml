@@ -1,0 +1,58 @@
+model:
+  vit_base: ViT-B-16
+  pretrained: openai
+  use_pure_clip: True
+  freeze_classification_head: True
+
+method:
+  name: snd
+  params:
+    ratio_prev: 9
+    ratio_pretrained: 0.5
+    threshold: 0.2
+    scale: 6
+    label_smoothing: 0.0
+  ref_dataset: imagenet
+  ref_dataset_config:
+    split_name: train
+    batch_size: 16
+    shuffle: True
+    drop_last: True
+    sample_num: 100000
+
+data:
+  name: fgvc-aircraft
+  root: /work/chu980802/data/classification
+  split:
+    train:
+      split_name: train
+      batch_size: 8
+      shuffle: True
+      drop_last: True
+    val:
+      split_name: val
+      batch_size: 256
+      shuffle: False
+      drop_last: False
+    test:
+      split_name: test
+      batch_size: 256
+      shuffle: False
+      drop_last: False
+
+task:
+  # fine-tuning arguments
+  init_lrs: 0.00001
+  weight_decay: 0.0005
+  seed: 1102
+  max_epoch: 10
+  max_iterations: 1000
+  warmup_length: 0
+
+  output_dir: "outputs"
+  log_interval: 10
+
+  world_size: 1
+  dist_url: "env://"
+  distributed: True
+  use_dist_eval_sampler: False

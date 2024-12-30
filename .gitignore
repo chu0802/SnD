@@ -1,8 +1,18 @@
+run.py
+prev_outputs
+*.png
+*.txt
+.vscode
+wandb
+*.sh
+*.pt
+outputs*
+*.pdf
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
+bash_scripts
 # C extensions
 *.so
 
@@ -106,10 +116,8 @@ ipython_config.py
 #pdm.lock
 #   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
 #   in version control.
-#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
+#   https://pdm.fming.dev/#use-with-ide
 .pdm.toml
-.pdm-python
-.pdm-build/
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/

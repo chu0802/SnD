@@ -1,0 +1,17 @@
+model:
+  vit_base: ViT-B-16
+  pretrained: openai
+  use_pure_clip: True
+
+data:
+  name: fgvc-aircraft
+  root: /work/chu980802/data/classification
+  split:
+    test:
+      split_name: test
+      batch_size: 256
+      shuffle: False
+      drop_last: False
+
+task:
+  seed: 1102
