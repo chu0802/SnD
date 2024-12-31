@@ -3,4 +3,4 @@ This is an official implementation of our work, Select and Distill: Selective Du
 
 #### Annoucement
 
-Due to my personal schedule, the code will be released near the end of the year (2024).
+[2024/12/31] Our full codebase has been released! Introduction and installation method (include packages) would be updated soon.
