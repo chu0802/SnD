@@ -92,7 +92,17 @@ You can access the model checkpoints and the reproduced average accuracy scores 
 <a name="run"></a>
 ## Running with the Scripts
 
-We provide several scripts to help you easily reproduce our experiments. Note that our experiments were conducted using 4x V100 GPUs in distributed parallel mode. Note that we have not tested our method outside of distributed mode, while the distributed mode can run on a single GPU.
+We provide several scripts to help you easily reproduce our experiments. Our experiments were conducted using 4x V100 GPUs in distributed parallel mode. Note that we have not tested our method outside of distributed mode, while the distributed mode can run on a single GPU.
+
+---
+
+### Prerequisite
+
+Before running the scripts, ensure that the root paths to your dataset folders are correctly configured in all files within the `configs/` directory.
+
+Specifically, update the `data.root` attribute to point to your dataset's root directory.
+
+Other configuration attributes do not need modification, as our scripts will automatically adjust them during runtime. However, you may modify these attributes if you wish to experiment with different hyper-parameters.
 
 ---
 
