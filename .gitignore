@@ -14,6 +14,7 @@ __pycache__/
 bash_scripts
 # C extensions
 *.so
+scripts/metrics.py
 
 # Distribution / packaging
 .Python
