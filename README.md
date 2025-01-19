@@ -92,7 +92,7 @@ You can access the model checkpoints and the reproduced average accuracy scores 
 <a name="run"></a>
 ## Running with the Scripts
 
-We provide several scripts to help you easily reproduce our experiments. Our experiments were conducted using 4x V100 GPUs in distributed parallel mode. Note that we have not tested our method outside of distributed mode, while the distributed mode can run on a single GPU.
+We provide several scripts to help you easily reproduce our experiments. Our experiments were conducted using 4x V100 GPUs in distributed parallel mode. Note that we have not tested our method outside of distributed mode. If you have only one GPU, run the code in distributed mode by specifying `--nproc_per_node` to 1.
 
 ---
 
