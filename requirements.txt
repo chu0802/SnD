@@ -1,8 +1,8 @@
 matplotlib==3.10.0
 pandas==2.2.3
-numpy==1.26.4
+numpy==1.26.3
 pillow==10.3.0
-timm==1.0.10
-wandb==0.19.1
+timm==0.9.12
+wandb==0.16.3
 omegaconf==2.3.0
 open_clip_torch==2.24.0

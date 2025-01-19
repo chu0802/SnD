@@ -19,11 +19,14 @@ https://chuyu.org/research/snd
 - [Announcement](#announcement)
 - [Installation](#install)
 - [Data Preparation](#data)
+- [Model Checkpoints](#checkpoints)
 - [Running the model](#run)
 - [Citation](#citation)
 
 <a name="announcement"></a>
 ## Annoucement
+
+**[2025/01/19]** The model checkpoints have also been uploaded! Check [here](#checkpoints) for more details.
 
 **[2025/01/19]** The instruction page is ready! We plan to release our original checkpoints soon.
 
@@ -75,7 +78,16 @@ Organize each dataset in the following directory structure:
     ├── <DATASET_NAME>_annotations.json
 ```
 
-The `<DATASET_NAME>_annotations.json` file contains the training, validation, and test splits, along with class names. The files we used for all datasets are provided [here](https://drive.google.com/drive/folders/1q3sW405OXYNO1E57Hu-NaEvF_FopRhQ8?usp=sharing). Download these files and place them in the appropriate paths as described above.
+The `<DATASET_NAME>_annotations.json` file contains the training, validation, and test splits, along with class names. The files we used for all datasets are provided [here](https://drive.google.com/drive/folders/144OIxusHyB8tRtlnvVGttCx0UE0ab_bv?usp=sharing). Download these files and place them in the appropriate paths as described above.
+
+<a name="checkpoints"></a>
+## Model Checkpoints
+
+We provide our original model checkpoints for public use. Due to limited storage space, only the latest checkpoints from each training sequence are released.
+
+Unfortunately, while reproducing our experiments, we observed a slight performance drop (0.08% in mean scores). This discrepancy may be attributed to differences in hardware or package versions. Despite this minor variation, our method still achieve state-of-the-art performance compared to previous works.
+
+You can access the model checkpoints and the reproduced average accuracy scores [here](https://drive.google.com/drive/folders/1V4rubgQsq-e9ydHbiEs5BtwnySJwghOG?usp=sharing).
 
 <a name="run"></a>
 ## Running with the Scripts
@@ -126,6 +138,17 @@ python -m scripts.continually_train --config_path configs/snd_config_4_gpus.yaml
 
 - The `--order` argument specifies an offset to shift the pre-defined dataset sequence.
 - For detailed task orders of each training sequence, refer to the supplementary materials.
+
+
+### Inference
+
+We also provide a script for performing inference on all datasets used in our experiments.
+
+Run the following command to execute the inference script using the model stored in `outputs/order_0/checkpoint_latest.pth`:
+
+```sh
+python -m scripts.inference --model_path outputs/order_0/checkpoint_latest.pth
+```
 
 <a name="citation"></a>
 ## Citation
