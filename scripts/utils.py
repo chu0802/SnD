@@ -30,7 +30,7 @@ class ContinualTrainer:
         sub_output_dir: str = "default",
         method_config=None,
         max_epoch: int = 10,
-        max_iterations: int = 10,
+        max_iterations: int = 1000,
         distributed: bool = False,
         nnodes: int = 1,
         nproc_per_node: int = 1,
@@ -107,7 +107,8 @@ class ContinualTrainer:
 
         return "\n".join(lines) + "\n"
 
-    def train_and_eval(self, pretrained_dataset=None, format=True):
+    def train_and_eval(self, format=True):
+        pretrained_dataset = None
         for training_dataset in self.training_dataset_seq:
             train_and_eval_script(
                 config_path=self.config_path,
