@@ -148,8 +148,6 @@ We also provide a script to continually train and evaluate across an entire sequ
 python -m scripts.continually_train --config_path configs/snd_config_4_gpus.yaml --order 0 --distributed --nproc_per_node 4
 ```
 
-- 🔴 **HOTFIX** 🔴: The `--order` argument currently has a bug. Currently, it shifts the sequence to the **right**, while it should shifting the sequence to the **left** as mentioned in our paper. We are actively working on resolving this issue.
-
 #### Note
 
 - The `--order` argument specifies an offset to shift the pre-defined dataset sequence.

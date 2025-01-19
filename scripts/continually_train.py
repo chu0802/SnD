@@ -8,7 +8,7 @@ from scripts.utils import DEFAULT_DATASET_SEQ, ContinualTrainer
 
 def parse_dataset_seq(args):
     dataset_seq = deque(deepcopy(DEFAULT_DATASET_SEQ))
-    dataset_seq.rotate(args.order)
+    dataset_seq.rotate(len(DEFAULT_DATASET_SEQ) - args.order)
     sub_output_dir = f"order_{args.order}"
 
     return dataset_seq, sub_output_dir
