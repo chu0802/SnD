@@ -3,52 +3,52 @@ from src.datasets.base import BaseClassificationDataset, BaseUnlabeledDataset
 
 class ImageNet(BaseClassificationDataset):
     dataset_name = "imagenet"
-    annotation_filename = "annotations_new.json"
+    annotation_filename = "imagenet_annotations.json"
 
 
 class Caltech101(BaseClassificationDataset):
     dataset_name = "caltech-101"
-    annotation_filename = "split_zhou_Caltech101_new.json"
+    annotation_filename = "caltech101_annotations.json"
 
 
 class OxfordPets(BaseClassificationDataset):
     dataset_name = "oxford-pets"
-    annotation_filename = "split_zhou_OxfordPets_new.json"
+    annotation_filename = "oxfordpets_annotations.json"
 
 
 class StanfordCars(BaseClassificationDataset):
     dataset_name = "stanford-cars"
-    annotation_filename = "split_zhou_StanfordCars_new.json"
+    annotation_filename = "stanfordcars_annotations.json"
 
 
 class Flowers102(BaseClassificationDataset):
     dataset_name = "flowers-102"
-    annotation_filename = "split_zhou_OxfordFlowers_new.json"
+    annotation_filename = "flowers102_annotations.json"
 
 
 class Food101(BaseClassificationDataset):
     dataset_name = "food-101"
-    annotation_filename = "split_zhou_Food101_new.json"
+    annotation_filename = "food101_annotations.json"
 
 
 class FGVCAircraft(BaseClassificationDataset):
     dataset_name = "fgvc-aircraft"
-    annotation_filename = "annotations_new.json"
+    annotation_filename = "aircraft_annotations.json"
 
 
 class EuroSAT(BaseClassificationDataset):
     dataset_name = "eurosat"
-    annotation_filename = "split_zhou_EuroSAT_new.json"
+    annotation_filename = "eurosat_annotations.json"
 
 
 class UCF101(BaseClassificationDataset):
     dataset_name = "ucf-101"
-    annotation_filename = "split_zhou_UCF101_new.json"
+    annotation_filename = "ucf101_annotations.json"
 
 
 class DTD(BaseClassificationDataset):
     dataset_name = "dtd"
-    annotation_filename = "split_zhou_DescribableTextures_new.json"
+    annotation_filename = "dtd_annotations.json"
 
 
 if __name__ == "__main__":
