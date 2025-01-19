@@ -94,6 +94,8 @@ You can access the model checkpoints and the reproduced average accuracy scores 
 
 We provide several scripts to help you easily reproduce our experiments. Note that our experiments were conducted using 4x V100 GPUs in distributed parallel mode. Note that we have not tested our method outside of distributed mode, while the distributed mode can run on a single GPU.
 
+---
+
 ### Train and Eval
 
 The following script allows training on **a single dataset** (e.g., fgvc-aircraft) and evaluating on **all datasets** using 4 GPUs.
@@ -126,6 +128,8 @@ python -m scripts.train_and_eval --config_path configs/snd_config_4_gpus.yaml --
 - Using more than 4 GPUs is not recommended, as we observed that the performance drops a bit.
 - When training with 1–4 GPUs, ensure that the batch size for training and reference data is correctly adjusted to match the number of GPUs.
 
+---
+
 ### Continual Training on the whole training sequence
 
 We also provide a script to continually train and evaluate across an entire sequence of datasets (i.e., reproduce our Multi-Domain Task Incremental Learning setting):
@@ -139,6 +143,7 @@ python -m scripts.continually_train --config_path configs/snd_config_4_gpus.yaml
 - The `--order` argument specifies an offset to shift the pre-defined dataset sequence.
 - For detailed task orders of each training sequence, refer to the supplementary materials.
 
+---
 
 ### Inference
 
