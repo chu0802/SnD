@@ -1,7 +1,6 @@
 run.py
 prev_outputs
 *.png
-*.txt
 .vscode
 wandb
 *.sh
