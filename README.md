@@ -83,7 +83,7 @@ The `<DATASET_NAME>_annotations.json` file contains the training, validation, an
 <a name="checkpoints"></a>
 ## Model Checkpoints
 
-We provide our original model checkpoints for public use. Due to limited storage space, only the latest checkpoints from each training sequence are released.
+We provide our original model checkpoints for public use. Due to limited storage space, only the last checkpoints for each training sequence are released.
 
 Unfortunately, while reproducing our experiments, we observed a slight performance drop (0.08% in mean scores). This discrepancy may be attributed to differences in hardware or package versions. Despite this minor variation, our method still achieve state-of-the-art performance compared to previous works.
 
