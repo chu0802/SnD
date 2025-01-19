@@ -132,6 +132,8 @@ To load a model trained on a specific dataset and **continue training** on anoth
 python -m scripts.train_and_eval --config_path configs/snd_config_4_gpus.yaml --pretrained_dataset fgvc-aircraft --dataset dtd --distributed --nproc_per_node 4
 ```
 
+The whole process of training and evaluation on a single training sequence using 4x V100 GPUs takes approximately **150 minutes** on our devices.
+
 #### Note
 
 - Our code has only been verified with 1 or 4 GPUs.
